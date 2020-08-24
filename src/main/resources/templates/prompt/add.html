@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <nav th:replace="fragments :: page-header"></nav>
+</head>
+<body>
+<form method="post" style="max-width:600px;">
+    <div class="form-group">
+        <label>How many hours of sleep did you get last night?
+            <br>
+            <input type="number" th:field="${prompt.sleep}" /></label>
+        <p class="error" th:errors="${prompt.sleep}"></p>
+        <br>
+        <br>
+        <br>
+        <label>On a scale of 1 to 10 how would you rate your overall mood today?
+            <br>
+        <input type="number" th:field="${prompt.mood}" /></label>
+        <p class="error" th:errors="${prompt.mood}"></p>
+        <br>
+        <br>
+        <br>
+        <label>On a scale of 1 to 10 how would you rate your level of anxiety today?
+            <br>
+        <input type="number" th:field="${prompt.anxiety}" /></label>
+        <p class="error" th:errors="${prompt.anxiety}"></p>
+        <br>
+        <br>
+        <br>
+        <label>What other symptoms, if any, are you experiencing today?
+            <br>
+        <input type="text" th:field="${prompt.sleep}" /></label>
+        <p class="error" th:errors="${prompt.sleep}"></p>
+
+    </div>
+
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>
